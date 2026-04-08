@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bollywood Mood Player (Text) — AI Mood → Song</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Bollywood Mood Player</h1>
+    <p class="lead">Type how you feel right now (text). The app will detect your mood and play a Bollywood song that fits it.</p>
+
+    <form id="moodForm" class="form">
+      <label for="moodInput">Write your current emotional mood</label>
+      <textarea id="moodInput" rows="4" placeholder="e.g., I feel lonely and nostalgic..."></textarea>
+      <div class="controls">
+        <button type="submit" id="submitBtn">Find a song</button>
+        <button type="button" id="shuffleBtn" disabled>Another song</button>
+      </div>
+    </form>
+
+    <section id="status" class="status hidden"></section>
+
+    <section id="result" class="hidden">
+      <div class="meta">
+        <div><strong>Detected mood:</strong> <span id="detectedMood">—</span></div>
+        <div id="sourceInfo" class="muted small"></div>
+      </div>
+
+      <div id="songCard" class="song-card">
+        <div class="song-info">
+          <h3 id="songTitle"></h3>
+          <p id="songArtist"></p>
+        </div>
+        <div id="playerContainer" class="player"></div>
+      </div>
+    </section>
+
+    <footer class="notes">
+      <small>Uses Hugging Face (server) for better emotion detection (optional). Uses YouTube Data API to fetch real video IDs. Configure API keys on the server.</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

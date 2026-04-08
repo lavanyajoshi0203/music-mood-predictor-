@@ -1,0 +1,18 @@
+{
+  "name": "bollywood-mood-player",
+  "version": "1.0.0",
+  "description": "Text-to-mood Bollywood song recommender (Hugging Face + YouTube Data API)",
+  "main": "server/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2"
+  }
+}
